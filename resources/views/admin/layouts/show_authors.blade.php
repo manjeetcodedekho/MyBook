@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div class="container md-5">
+<div class="container">
     <div class="row">
         <div class="col-md-12">
             <nav aria-label="breadcrumb">
@@ -10,7 +10,7 @@
                     <li class="breadcrumb-item active" aria-current="page">Author List</li>
                 </ol>
             </nav>
-            <table id="datatablesSimple">
+            <table id="datatablesSimple" class="table table-bordered">
                 <thead>
                     <tr>
                         <th>Author Name</th>

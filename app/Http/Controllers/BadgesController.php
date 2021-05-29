@@ -18,12 +18,16 @@ class BadgesController extends Controller
 
     public function SaveBadges(Request $request)
     {
+        $validated = $request->validate([
+            'badge_label' => 'required',
+            'badge_description' => 'required',
+        ]);
         Badges::insert([
             'author_id' => $request->author_id,
             'badge_label' => $request->badge_label,
             'badge_description' => $request->badge_description,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Badges Add Successfully');
     }
 
     public function BadgesShow()

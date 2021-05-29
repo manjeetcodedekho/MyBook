@@ -24,17 +24,24 @@ class AuthorsController extends Controller
      */
     public function AuthorsStore(Request $request)
     {
+        $validated = $request->validate([
+            'author_name' => 'required',
+            'author_email' => 'required',
+            'author_bio' => 'required',
+        ]);
+
+
         Authors::insert([
             'author_name' => $request->author_name,
             'author_email' => $request->author_email,
             'author_bio' => $request->author_bio,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('message','Author Added Successfully');
     }
 
     public function AuthorShow()
     {
-        $author = Authors::latest()->get();
+        $author = Authors::latest()->orderBy('id','desc')->get();
         return view('admin.layouts.show_authors', compact('author'));
     }
 

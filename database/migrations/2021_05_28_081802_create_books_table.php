@@ -19,7 +19,6 @@ class CreateBooksTable extends Migration
             $table->string('book_name');
             $table->integer('book_price');
             $table->integer('book_isbn');
-            $table->integer('book_average_rating');
             $table->date('book_publish_date');
             $table->timestamps();
         });

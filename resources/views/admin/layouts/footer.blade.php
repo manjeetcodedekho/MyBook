@@ -12,6 +12,8 @@
    </footer>
    </div>
    </div>
+   
+   
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
    <script src="{{ asset('template/dist/js/scripts.js') }}"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
@@ -19,6 +21,7 @@
    <script src="{{ asset('template/dist/assets/demo/chart-bar-demo.js') }}"></script>
    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
    <script src="{{ asset('template/dist/js/datatables-simple-demo.js') }}"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.0.0/nouislider.js" integrity="sha512-KTg8s3jRpepCrQe/b6hgxRv+QPZDflr6XolfLaM5JzBcK7r6YpjTKtmxJcuh/afGiSJNjxfzaKGF6nSbSVfWQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    </body>
 
    </html>

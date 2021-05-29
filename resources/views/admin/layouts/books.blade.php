@@ -6,7 +6,12 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-
+    <h3>Add Books</h3>
+    @if(Session::has('message'))
+    <div class="alert alert-success">
+        {{ Session::get('message')}}
+    </div>
+    @endif
     <div class="py-12">
         <form action="{{ route('keep.book') }}" method="POST">
             @csrf
@@ -32,22 +37,30 @@
                 <div class="form-group">
                     <label for="">Book Name</label>
                     <input type="text" class="form-control" name="book_name">
+                    @error('book_name')
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label for="">Book Price</label>
                     <input type="text" class="form-control" name="book_price">
+                    @error('book_price')
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label for="">Book ISBN</label>
                     <input type="text" class="form-control" name="book_isbn">
-                </div>
-                <div class="form-group">
-                    <label for="">Book Average Rating</label>
-                    <input type="text" class="form-control" name="book_average_rating">
+                    @error('book_isbn')
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label for="">Publish Date</label>
                     <input type="date" class="form-control" name="book_publish_date">
+                    @error('book_publish_date')
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                 </div><br>
                 <div class="form-group">
                     <button class="btn btn-primary" type="submit">Add Book</button>

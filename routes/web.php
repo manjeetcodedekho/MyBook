@@ -44,3 +44,6 @@ Route::post('keep', [BooksController::class, 'KeepBook'])->name('keep.book');
 Route::get('show_books', [BooksController::class, 'BookShow'])->name('show.book');
 Route::get('/', [BooksController::class, 'BookDetails'])->name('book.details');
 
+//search
+Route::post('book/search', [BooksController::class, 'BookSearch'])->name('book.search');
+
